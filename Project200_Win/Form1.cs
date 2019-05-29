@@ -16,5 +16,39 @@ namespace Project200_Win
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void btnPackages_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProdSuppliers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPackProdSupplier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSuppliers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
