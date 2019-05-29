@@ -26,21 +26,21 @@ namespace Project200_Win
         }
         private void btnPackages_Click(object sender, EventArgs e)
         {
-            //frmPackages pk = new frmPackages();
-            //pk.Show();
+            frmPackages pk = new frmPackages();
+            pk.Show();
         }
 
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            //frmProducts p = new frmProducts();
-            //p.Show();
+            frmProducts p = new frmProducts();
+            p.Show();
         }
 
         private void btnProdSuppliers_Click(object sender, EventArgs e)
         {
-            //frmProductSuppliers ps = new frmProductSuppliers();
-            //ps.Show();
+            frmProduct_Suppliers ps = new frmProduct_Suppliers();
+            ps.Show();
 
         }
 
@@ -52,6 +52,10 @@ namespace Project200_Win
 
         }
 
-
+        private void btnSuppliers_Click(object sender, EventArgs e)
+        {
+            frmSuppliers s = new frmSuppliers();
+            s.Show();
+        }
     }
 }

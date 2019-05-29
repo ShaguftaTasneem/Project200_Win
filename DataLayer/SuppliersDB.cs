@@ -48,7 +48,7 @@ namespace DataLayer
 
         }
 
-        public static List<Suppliers> GetOrdersGridDB()  // Prepares the dta for Grid View
+        public static List<Suppliers> GetSuppliersGridDB()  // Prepares the dta for Grid View
 
         {
             SqlConnection connection = TravelExperts.GetConnection();
@@ -86,6 +86,38 @@ namespace DataLayer
 
             return lstSuppliers;
 
+        }
+
+        public static int UpdateSupplier(string SupName)  // Update the data in ShippedDate field
+        {
+            SqlConnection connection = TravelExperts.GetConnection();
+            int ireturn = 0;
+            {
+                try
+
+                {
+                    string sql = " UPDATE Suppliers SET SupplierId =@SupplierId , SupName=@SupName";
+                    //where OrderID='OrderID'";
+                    //"WHERE RequiredDate > ShippedDate AND ShippedDate < OrderDate";
+                    SqlCommand command = new SqlCommand(sql, connection);
+
+                    //command.Parameters.AddWithValue("@SupplierId",SupplierId);
+                    command.Parameters.AddWithValue("@SupName", SupName);
+
+
+                    ireturn = command.ExecuteNonQuery();
+                }
+
+                catch (Exception e)
+                { }
+
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+            return ireturn;
         }
 
 

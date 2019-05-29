@@ -65,6 +65,7 @@
             this.btnSuppliers.TabIndex = 11;
             this.btnSuppliers.Text = "Suppliers";
             this.btnSuppliers.UseVisualStyleBackColor = true;
+            this.btnSuppliers.Click += new System.EventHandler(this.btnSuppliers_Click);
             // 
             // btnPackProdSupplier
             // 
@@ -101,7 +102,6 @@
             this.btnPackages.TabIndex = 7;
             this.btnPackages.Text = "Packages";
             this.btnPackages.UseVisualStyleBackColor = true;
-            //this.btnPackages.Click += new System.EventHandler(this.btnPackages_Click_1);
             // 
             // Form1
             // 

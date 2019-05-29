@@ -97,6 +97,7 @@
             this.btnSupDetail.TabIndex = 4;
             this.btnSupDetail.Text = "Please Click to Update Supplier Details";
             this.btnSupDetail.UseVisualStyleBackColor = true;
+            this.btnSupDetail.Click += new System.EventHandler(this.btnSupDetail_Click);
             // 
             // label4
             // 
