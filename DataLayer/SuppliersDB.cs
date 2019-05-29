@@ -48,6 +48,46 @@ namespace DataLayer
 
         }
 
+        public static List<Suppliers> GetOrdersGridDB()  // Prepares the dta for Grid View
+
+        {
+            SqlConnection connection = TravelExperts.GetConnection();
+            Suppliers S;
+            List<Suppliers> lstSuppliers = new List<Suppliers>();
+            try
+
+            {
+                string sql = " Select * from Suppliers";
+
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                SqlDataReader reader = command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+
+                while (reader.Read())
+                {
+                    S = new Suppliers();
+
+                    S.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+                    S.SupName = Convert.ToString(reader["SupName"]);
+
+                    // reader.Add(O);
+
+                    lstSuppliers.Add(S);
+                }
+
+            }
+
+            catch (Exception e)
+            { }
+            finally
+            {
+                connection.Close();
+            }
+
+            return lstSuppliers;
+
+        }
+
 
 
     }

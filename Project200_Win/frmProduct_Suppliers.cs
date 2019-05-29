@@ -1,12 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Project200_Win
 {
-    class frmProduct_Suppliers
+    public partial class frmProduct_Suppliers : Form
     {
+        public frmProduct_Suppliers()
+        {
+            InitializeComponent();
+        }
     }
 }
